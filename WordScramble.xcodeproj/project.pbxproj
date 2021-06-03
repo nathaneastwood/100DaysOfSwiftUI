@@ -11,6 +11,7 @@
 		D8F7FA462667FAAB00818F01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F7FA452667FAAB00818F01 /* ContentView.swift */; };
 		D8F7FA482667FAAC00818F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F7FA472667FAAC00818F01 /* Assets.xcassets */; };
 		D8F7FA4B2667FAAC00818F01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F7FA4A2667FAAC00818F01 /* Preview Assets.xcassets */; };
+		D8F7FA532669484500818F01 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8F7FA522669484500818F01 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		D8F7FA472667FAAC00818F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8F7FA4A2667FAAC00818F01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8F7FA4C2667FAAC00818F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F7FA522669484500818F01 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = start.txt; path = "../../HackingWithSwift/SwiftUI/project5-files/start.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				D8F7FA452667FAAB00818F01 /* ContentView.swift */,
 				D8F7FA472667FAAC00818F01 /* Assets.xcassets */,
 				D8F7FA4C2667FAAC00818F01 /* Info.plist */,
+				D8F7FA522669484500818F01 /* start.txt */,
 				D8F7FA492667FAAC00818F01 /* Preview Content */,
 			);
 			path = WordScramble;
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F7FA4B2667FAAC00818F01 /* Preview Assets.xcassets in Resources */,
+				D8F7FA532669484500818F01 /* start.txt in Resources */,
 				D8F7FA482667FAAC00818F01 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
