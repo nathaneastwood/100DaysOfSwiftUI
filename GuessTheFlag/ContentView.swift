@@ -28,6 +28,10 @@ struct ContentView: View {
     
     @State private var userScore = 0
     
+    @State private var animationAmount = 0.0
+    @State private var opacityAmount = 1.0
+    @State private var scaleAmount: CGFloat = 1.0
+    
     var body: some View {
         ZStack{
             LinearGradient(
@@ -39,7 +43,8 @@ struct ContentView: View {
             
             VStack(spacing: 30) {
                 VStack {
-                    Text("Tap the flag of!")
+                    Text("Tap the flag of")
+                        .font(.title)
                         .foregroundColor(.white)
                     Text(countries[correctAnswer])
                         .font(.largeTitle)
@@ -52,11 +57,19 @@ struct ContentView: View {
                         self.flagTapped(number)
                     }) {
                         FlagImage(country: self.countries[number])
+                            .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: correctAnswer == number ? 1 : 0, z: 0))
+                            .animation(Animation.easeOut)
+                            .opacity(correctAnswer != number ? opacityAmount : 1.0)
+                            .animation(Animation.easeOut)
+                            .scaleEffect(correctAnswer != number ? scaleAmount : 1.0)
+                            .animation(.default)
                     }
+                    
                 }
                 
                 Text("Your score is \(userScore)")
                     .foregroundColor(.white)
+                    .font(.title)
                 
                 Spacer()
             }
@@ -76,8 +89,16 @@ struct ContentView: View {
         if number == correctAnswer {
             scoreTitle = "Correct"
             userScore += 1
+            withAnimation {
+                animationAmount += 360
+                opacityAmount = 0.25
+            }
+            animationAmount = 0.0
         } else {
             scoreTitle = "Wrong! That's the flag of \(countries[number])"
+            withAnimation {
+                scaleAmount = 0.5
+            }
         }
         showingScore = true
     }
@@ -85,6 +106,8 @@ struct ContentView: View {
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        opacityAmount = 1.0
+        scaleAmount = 1.0
     }
 }
 
