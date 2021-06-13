@@ -2,4 +2,4 @@ BetterRest
 
 An app demonstrating CreateML
 
-![](BetterRest.gif)
+<img src="BetterRest.gif" width="341" heigh="677"/>

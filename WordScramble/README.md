@@ -2,4 +2,4 @@
 
 This app demonstrates using Strings in Swift.
 
-![](WordScramble.gif)
+<img src="WordScramble.gif" width="341" heigh="677"/>
