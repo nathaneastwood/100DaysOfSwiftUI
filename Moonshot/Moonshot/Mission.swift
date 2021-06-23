@@ -35,4 +35,12 @@ struct Mission: Codable, Identifiable {
             return "N/A"
         }
     }
+    
+    func crewNames() -> String {
+        var names = [String]()
+        for member in crew {
+            names.append(member.name.capitalized)
+        }
+        return (names.map{String($0)}).joined(separator: ", ")
+    }
 }
